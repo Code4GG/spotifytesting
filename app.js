@@ -30,6 +30,7 @@ $.searchArtists = function (query) {
           q: query,
           client_id: 'ddb2837ecc9343b2a0c46a3349aa40ca',
           type: 'track',
+          limit: 6,
           access_token: $.urlParam('access_token'),
           token_type: 'bearer',
       },
@@ -42,10 +43,13 @@ $.searchArtists = function (query) {
         const uri = response.tracks.items[0].uri;
         // "<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + uri + 
         //  "width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>"
-        // $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=" + uri + 
-        //  "'width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+        for (let i = 0; i < response.tracks.items.length; i ++){
+          $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=" + uri + 
+         "'width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+        }
+        
         const spot = response.tracks.items[0].album.exeternal_urls.spotify;
-        $('#results').html("<iframe src=" + spot + "></iframe");
+        
         // if(!jQuery.isEmptyObject(response.artists.items)) {
         //   try {
         //     imageUrl = response.artists.items[0].images[0].url;
