@@ -38,8 +38,7 @@ $.searchArtists = function (query) {
       success: function (response) {
         console.log('hi');
         console.log(response);
-
-        console.log(response.items[0].uri);
+        console.log(response.tracks.items[0].uri);
         // $('#results').html(results_table);
         // if(!jQuery.isEmptyObject(response.artists.items)) {
         //   try {
