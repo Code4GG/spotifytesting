@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="api.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://developer.spotify.com/web-api/static/css/cached.css">
+    <title>Spotify Search</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search for an Artist</h1>
+      <p>Type an artist name and click on "Search" to see information about your favorite musician!</p>
+      <input type="text" id="query" value="" class="form-control" placeholder="Enter an artist name, like Ricc Flairr">
+      <button id="search" class="btn btn-primary" value="Search">Search</button>
+      <button id="login" class="btn btn-primary" value="Login">Login</button>
+      <div id="results"></div>
+    </div>
+    <div id="inactive"></div>
+  </body>
+  <style type="text/css">
+    #results {
+      visibility: hidden;
+    }
+    body {
+      padding: 20px;
+    }
+    .btn {
+      margin: 10px;
+      margin-left: 0;
+    }
+    img {
+      width: 200px;
+    }
+    td {
+      padding: 10px;
+      vertical-align: top;
+      border: 4px solid rgb(55, 187, 93);
+      width: 210px;
+    }
+    table {
+      border: 5px solid black;
+    }
+    #about {
+      word-wrap: normal;
+    }
+    #inactive {
+      visibility: visible;
+      opacity: 0;
+      background-color: grey;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity 1s;
+    }
+    #login {
+      z-index: 2;
+      position: absolute;
+    }
+  </style>
+</html>
