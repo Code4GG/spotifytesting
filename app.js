@@ -13,13 +13,6 @@ $.urlParam = function(name) {
   }
 }
 
-// Table definition for artist result
-var results_table =
-  "<table id='rt'>" +
-  "<tr><td id='pic'rowspan=2></td>" +
-  "<td id='name'></td></tr>" +
-  "<tr><td id='about'></td>" +
-  "</tr></table";
 
 // This function uses our token to send an api to spotify in order to get
 // information about an artist
@@ -47,21 +40,8 @@ $.searchArtists = function (query) {
          "'width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
         }
         
-        const spot = response.tracks.items[0].album.exeternal_urls.spotify;
+        // const spot = response.tracks.items[0].album.exeternal_urls.spotify;
         
-        // if(!jQuery.isEmptyObject(response.artists.items)) {
-        //   try {
-        //     imageUrl = response.artists.items[0].images[0].url;
-        //     $('#pic').html($('<img>',{id:'artistPicture',src:imageUrl}));
-        //   }
-        //   catch(err) {
-        //     $('#pic').html('<b>No image provided</b>');
-        //   }
-        //   genre = response.artists.items[0].genres.join(", ");
-        //   if(!genre.length > 0) genre = 'None provided';
-        //   $('#name').append(response.artists.items[0].name);
-        //   $('#about').append('Genres: ' + genre);
-        // }
         // else {
         //   $('#results').html('<b>No results found</b>');
         // }
