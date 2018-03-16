@@ -29,7 +29,7 @@ $.searchArtists = function (query) {
       data: {
           q: query,
           client_id: 'ddb2837ecc9343b2a0c46a3349aa40ca',
-          type: 'Track',
+          type: 'track',
           access_token: $.urlParam('access_token'),
           token_type: 'bearer',
       },
