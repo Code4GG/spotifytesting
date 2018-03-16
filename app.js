@@ -36,6 +36,7 @@ $.searchArtists = function (query) {
       // Upon success of the api message, we get the contents and parse through it.
       // If there are any missing values or no records found, we let the user know
       success: function (response) {
+        console.log('hi');
         console.log(response);
         $('#results').html(results_table);
         if(!jQuery.isEmptyObject(response.artists.items)) {
