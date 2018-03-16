@@ -42,7 +42,7 @@ $.searchArtists = function (query) {
         const uri = response.tracks.items[0].uri;
         // "<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + uri + 
         //  "width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>"
-        $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + uri + 
+        $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=" + uri + 
          "width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
         // if(!jQuery.isEmptyObject(response.artists.items)) {
         //   try {
