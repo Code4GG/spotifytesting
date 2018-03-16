@@ -43,7 +43,7 @@ $.searchArtists = function (query) {
         // "<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + uri + 
         //  "width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>"
         $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=" + uri + 
-         "width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+         "'width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
         // if(!jQuery.isEmptyObject(response.artists.items)) {
         //   try {
         //     imageUrl = response.artists.items[0].images[0].url;
