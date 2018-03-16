@@ -29,7 +29,7 @@ $.searchArtists = function (query) {
       data: {
           q: query,
           client_id: 'ddb2837ecc9343b2a0c46a3349aa40ca',
-          type: 'Artist',
+          type: 'Track',
           access_token: $.urlParam('access_token'),
           token_type: 'bearer',
       },
@@ -38,23 +38,23 @@ $.searchArtists = function (query) {
       success: function (response) {
         console.log('hi');
         console.log(response);
-        $('#results').html(results_table);
-        if(!jQuery.isEmptyObject(response.artists.items)) {
-          try {
-            imageUrl = response.artists.items[0].images[0].url;
-            $('#pic').html($('<img>',{id:'artistPicture',src:imageUrl}));
-          }
-          catch(err) {
-            $('#pic').html('<b>No image provided</b>');
-          }
-          genre = response.artists.items[0].genres.join(", ");
-          if(!genre.length > 0) genre = 'None provided';
-          $('#name').append(response.artists.items[0].name);
-          $('#about').append('Genres: ' + genre);
-        }
-        else {
-          $('#results').html('<b>No results found</b>');
-        }
+        // $('#results').html(results_table);
+        // if(!jQuery.isEmptyObject(response.artists.items)) {
+        //   try {
+        //     imageUrl = response.artists.items[0].images[0].url;
+        //     $('#pic').html($('<img>',{id:'artistPicture',src:imageUrl}));
+        //   }
+        //   catch(err) {
+        //     $('#pic').html('<b>No image provided</b>');
+        //   }
+        //   genre = response.artists.items[0].genres.join(", ");
+        //   if(!genre.length > 0) genre = 'None provided';
+        //   $('#name').append(response.artists.items[0].name);
+        //   $('#about').append('Genres: ' + genre);
+        // }
+        // else {
+        //   $('#results').html('<b>No results found</b>');
+        // }
       }
   });
 };
