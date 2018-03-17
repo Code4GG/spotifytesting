@@ -35,10 +35,10 @@ $.searchArtists = function (query) {
         const uri = response.tracks.items[0].uri;
         // "<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + uri + 
         //  "width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>"
-        for (let i = 0; i < response.tracks.items.length; i ++){
-          $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=" + uri[i] + 
+        
+          $('#results').html( "<iframe src='https://open.spotify.com/embed?uri=" + uri +
          "'width='300' height='80' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
-        }
+        
         
         // const spot = response.tracks.items[0].album.exeternal_urls.spotify;
         
