@@ -48,7 +48,7 @@ $.searchArtists = function (query) {
       }
   });
 };
-
+// only displays previews
 // Event handling
 $(document).ready(function() {
   // Visibility of interface depending on if the user is logged in
